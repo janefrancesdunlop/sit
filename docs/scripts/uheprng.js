@@ -41,7 +41,7 @@
 function uheprng() {
 	return (function() {
   		var o = 48;					// set the 'order' number of ENTROPY-holding 32-bit values
-		var c = 1;					// init the 'carry' used by the multiply-with-carry (MWC) algorithm
+		var c = getEpochSecond;					// init the 'carry' used by the multiply-with-carry (MWC) algorithm
 		var p = o;					// init the 'phase' (max-1) of the intermediate variable pointer
 		var s = new Array(o);	// declare our intermediate variables array
 		var i,j,k=0;				// general purpose locals
