@@ -12,7 +12,7 @@
         ]
 
         const randomizer = uheprng()
-        const numVideosToCombine = 5
+        const numVideosToCombine = 3
         let selectedVideos = []
         let videosPlayed = 0
         
@@ -22,7 +22,7 @@
             randomizer.initState();
             randomizer.hashString(userInput)
 
-            return Array(numVideosToCombine).fill().map(n => randomizer(videoUrls.length))
+            return Array(numVideosToCombine).fill().map(n => randomizer(videoUrls))
         }
 
         const generateVideo = () => {
