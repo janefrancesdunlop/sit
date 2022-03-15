@@ -1,18 +1,26 @@
-<html lang='en' class=''>
-  <head>
-   <script src="scripts/uheprng.js"></script>
-   <script type="text/javascript">
-        const videoUrls = 
-           [
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts/uheprng.js"></script>
+    </head>
+    <body>
+        <input id="user-input" placeholder="type here" />
+        <a href="javascript:generateVideo();">Generate Video</a>
+        <div id="video-container"></div>
+    </body>
+
+    <script type="text/javascript">
+        const videoUrls = [
+            // replace these with the path or url to each of your fragment videos
             "https://vimeo.com/678318057/4b23225724",
             "https://vimeo.com/678318344/21e9b40fcb",
             "https://vimeo.com/678319873/660ab0ae8f",
             "https://vimeo.com/678318898/86057d4e95", 
-            "https://vimeo.com/678319459/d2cbadca5c4"
-           ]
+            "https://vimeo.com/678319459/d2cbadca5c4",
+        ]
 
         const randomizer = uheprng()
-        const numVideosToCombine = 3
+        const numVideosToCombine = 5
         let selectedVideos = []
         let videosPlayed = 0
         
@@ -68,11 +76,5 @@
             video.classList.remove("playing");
         }
     </script>
-    </head>
-    </body>
-      <input id="user-input" placeholder="enter text..." />
-        <a href="javascript:generateVideo();">Generate Video</a>
-        <div id="video-container"></div>
-    </body>
 </html>
 
