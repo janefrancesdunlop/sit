@@ -1,5 +1,10 @@
 <html>
     <head>
+        <input id="user-input" placeholder="type here" />
+        <a href="javascript:generateVideo();">Generate Video</a>
+        <div id="video-container"></div>
+    </head>
+    <body>
     <script src="scripts/uheprng.js"></script>
     <script type="text/javascript">
         const videoUrls = [
@@ -10,7 +15,6 @@
             "https://vimeo.com/678318898/86057d4e95", 
             "https://vimeo.com/678319459/d2cbadca5c4",
         ]
-
         const randomizer = uheprng()
         const numVideosToCombine = 3
         let selectedVideos = []
@@ -68,11 +72,6 @@
             video.classList.remove("playing");
         }
     </script>
-    </head>
-    <body>
-        <input id="user-input" placeholder="type here" />
-        <a href="javascript:generateVideo();">Generate Video</a>
-        <div id="video-container"></div>
     </body>
 </html>
 
